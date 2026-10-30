@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schema · Research Graph</title>
+<meta name="description" content="The Research Graph meta model, version 3.5.0: the researchers, publications, datasets, grants and organisations it connects, and their properties.">
+<link rel="canonical" href="https://researchgraph.org/schema/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Research Graph Foundation">
+<meta property="og:title" content="Schema · Research Graph">
+<meta property="og:description" content="The Research Graph meta model, version 3.5.0: the researchers, publications, datasets, grants and organisations it connects, and their properties.">
+<meta property="og:url" content="https://researchgraph.org/schema/">
+<meta property="og:image" content="https://researchgraph.org/assets/images/site/share.png">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/images/site/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/images/site/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/site/apple-touch-icon.png">
+<link rel="preload" href="/fonts/source-sans-3-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/research-graph.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/research-graph-graph.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="rg-skip-link" href="#main">Skip to content</a>
+<div class="rg-container">
+  <header class="rg-header">
+    <a class="rg-header__brand" href="/" aria-label="Research Graph Foundation home">
+      <img class="rg-header__logo rg-theme-light-only" src="/assets/images/site/logo.svg" alt="Research Graph" width="242" height="40">
+      <img class="rg-header__logo rg-theme-dark-only" src="/assets/images/site/logo-white.svg" alt="Research Graph" width="242" height="40">
+    </a>
+    <details class="rg-menu" open>
+      <summary>Menu</summary>
+      <nav class="rg-nav" aria-label="Main">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schema/" aria-current="page">Schema</a></li>
+          <li class="has-children">
+            <details>
+              <summary>Projects</summary>
+              <ul>
+                <li><a href="/national-graph/">National (PID) Graph</a></li>
+                <li><a href="/cadre/">CADRE</a></li>
+                <li><a href="/augment-api/">Augment-API</a></li>
+                <li><a href="/research-graph-team/">Research Graph Team</a></li>
+                <li><a href="/covid-19-research-graph/">COVID-19 Research Graph</a></li>
+                <li><a href="/gesis-research-graph/">GESIS Research Graph</a></li>
+                <li><a href="/nci-research-graph/">NCI Research Graph</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="https://hub.researchgraph.org/">Hub</a></li>
+          <li class="has-children">
+            <details>
+              <summary>About</summary>
+              <ul>
+                <li><a href="/about/">About us</a></li>
+                <li><a href="/collaborators/">Collaborators</a></li>
+                <li><a href="/collaborators/publications/">Publications</a></li>
+                <li><a href="/about/#contact-us">Contact</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </details>
+  </header>
+</div>
+
+<main id="main" class="rg-container">
+  <div class="page-top page-top--side">
+    <div class="page-top__main">
+      <div class="page-header">
+        <h1>Research Graph metamodel</h1>
+        
+      </div>
+      <div class="page-intro">
+<p>Version:3.5.0<br>
+Last update: 10 October 2021</p>
+      </div>
+    </div>
+<div class="page-aside page-aside--figure">
+<figure class="figure figure--graph"><svg xmlns="http://www.w3.org/2000/svg" class="rg-graph" viewBox="0 0 320 344" width="320" height="344" role="group" aria-label="The Research Graph metamodel: Researcher, Research Data, Organisation, Publication and Grant, each linked to the other four">
+<g fill="none" stroke="#757B81" stroke-width="1.5" stroke-linecap="round">
+<line x1="160" y1="34" x2="96" y2="168"/>
+<line x1="160" y1="34" x2="224" y2="168"/>
+<line x1="96" y1="168" x2="224" y2="168"/>
+<line x1="96" y1="168" x2="40" y2="290"/>
+<line x1="224" y1="168" x2="280" y2="290"/>
+<line x1="40" y1="290" x2="280" y2="290"/>
+<path d="M160 34A230 230 0 0 0 40 290"/>
+<path d="M160 34A230 230 0 0 1 280 290"/>
+<line x1="96" y1="168" x2="280" y2="290"/>
+<line x1="224" y1="168" x2="40" y2="290"/>
+</g>
+<rect class="rg-entity-node rg-entity--researcher" x="135.2" y="9.2" width="49.6" height="49.6" rx="7.4" fill="#63CC9E" stroke="#56B38C" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--research-data" x="71.2" y="143.2" width="49.6" height="49.6" rx="7.4" fill="#EB6E1F" stroke="#B84A03" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--organisation" x="199.2" y="143.2" width="49.6" height="49.6" rx="7.4" fill="#9662D0" stroke="#65428E" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--publication" x="15.2" y="265.2" width="49.6" height="49.6" rx="7.4" fill="#55BFF6" stroke="#4BA9DC" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--grant" x="255.2" y="265.2" width="49.6" height="49.6" rx="7.4" fill="#FFD66C" stroke="#F3B835" stroke-width="2"/>
+<g font-family="'Source Sans 3', 'Source Sans Pro', Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1A1F24" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round" paint-order="stroke">
+<text x="160" y="80">Researcher</text>
+<text x="96" y="214">Research Data</text>
+<text x="224" y="214">Organisation</text>
+<text x="40" y="336">Publication</text>
+<text x="280" y="336">Grant</text>
+</g>
+</svg></figure>
+</div>
+
+  </div>
+<section class="rg-section rg-section--marked page-section" id="research-objects">
+<p class="rg-marker" aria-hidden="true">01</p>
+<h2>Research objects</h2>
+<p>The Research Graph metamodel includes the following research objects:</p>
+<div class="rg-cards object-cards">
+<article class="rg-card rg-entity-card rg-entity--researcher"><h3><a href="#Researcher">Researcher</a></h3><p>Representing the researcher, research staff, author or an individual who participates in a research project.</p></article>
+<article class="rg-card rg-entity-card rg-entity--publication"><h3><a href="#Publication">Publication</a></h3><p>Representing conference papers, journal articles, grey literature and books.</p></article>
+<article class="rg-card rg-entity-card rg-entity--research-data"><h3><a href="#Dataset">Research Data</a></h3><p>Representing a dataset that is an input or output of research activity.</p></article>
+<article class="rg-card rg-entity-card rg-entity--grant"><h3><a href="#Grant">Grant</a></h3><p>Representing a funded project activity.</p></article>
+<article class="rg-card rg-entity-card rg-entity--organisation"><h3><a href="#Organisation">Organisation</a></h3><p>Representing a research organisation like a university or a research institute.</p></article>
+</div>
+</section>
+<section class="rg-section rg-section--marked page-section">
+<p class="rg-marker" aria-hidden="true">02</p>
+<p><a id="Researcher"></a></p>
+<h2>Researcher</h2>
+<p>Representing the researcher, research staff, author or an individual who participates in a research project.</p>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Property, Expected Type, Format and comment"><table class="rg-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Expected Type</th>
+<th>Format and comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><strong>key*</strong></code></td>
+<td>string</td>
+<td>This is a unique URI that identifies the research object in a Research Graph database. The best practice is to follow: researchgraph.ai/<a href="#Researcher-source">@source</a>/<a href="#Researcher-local_id">@local_id</a></td>
+</tr>
+<tr>
+<td><code><a id="Researcher-source"></a><strong>source*</strong></code></td>
+<td>string</td>
+<td>A unique name that identifies the source of the metadata. The best practice is to use a domain name without extension. Example: ‘orcid’, ‘datacite’, ‘nih’</td>
+</tr>
+<tr>
+<td><code><a id="Researcher-local_id"></a><strong>local_id*</strong></code></td>
+<td>string</td>
+<td>A unique string that identifies the records at the <a href="#Researcher-source">@source</a> database.</td>
+</tr>
+<tr>
+<td><code><strong>last_updated*</strong></code></td>
+<td>dateTime</td>
+<td>Date and time of updating this record in a Research Graph database.</td>
+</tr>
+<tr>
+<td><code><strong>full_name*</strong></code></td>
+<td>string</td>
+<td>The researcher’s full name is often available while <a href="#Researcher-first_name">@first_name</a> and <a href="#Researcher-last_name">@last_name</a> are not separately accessible.</td>
+</tr>
+<tr>
+<td><code><a id="Researcher-first_name"></a>first_name</code></td>
+<td>string</td>
+<td>Author first name preferably in English.</td>
+</tr>
+<tr>
+<td><code><a id="Researcher-last_name"></a>last_name</code></td>
+<td>string</td>
+<td>Author last name preferably in English.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>URL of the item.</td>
+</tr>
+<tr>
+<td><code>orcid</code></td>
+<td>string</td>
+<td>ORCID identifier with xxxx-xxxx-xxxx-xxxx format. Example: ‘1111-2222-3333-444x’. More information: <a href="https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier">https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier.</a></td>
+</tr>
+<tr>
+<td><code>scopus_author_id</code></td>
+<td>string</td>
+<td>The identifier for an author assigned in Scopus bibliographic database.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>* Required properties are marked with bold text.</strong></p>
+</section>
+<section class="rg-section rg-section--marked page-section">
+<p class="rg-marker" aria-hidden="true">03</p>
+<p><a id="Publication"></a></p>
+<h2>Publication</h2>
+<p>Representing conference papers, journal articles, grey literature and books.</p>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Property, Expected Type, Format and comment"><table class="rg-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Expected Type</th>
+<th>Format and comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><strong>key*</strong></code></td>
+<td>string</td>
+<td>This is a unique URI that identifies the research object in a Research Graph database. The best practice is to follow: researchgraph.ai/<a href="#Publication-source">@source</a>/<a href="#Publication-local_id">@local_id</a></td>
+</tr>
+<tr>
+<td><code><a id="Publication-source"></a><strong>source*</strong></code></td>
+<td>string</td>
+<td>A unique name that identifies the source of the metadata. The best practice is to use a domain name without extension. Example: ‘orcid’, ‘datacite’, ‘nih’</td>
+</tr>
+<tr>
+<td><code><a id="Publication-local_id"></a><strong>local_id*</strong></code></td>
+<td>string</td>
+<td>A unique string that identifies the records at the <a href="#Publication-source">@source</a> database.</td>
+</tr>
+<tr>
+<td><code><strong>last_updated*</strong></code></td>
+<td>dateTime</td>
+<td>Date and time of updating this record in a Research Graph database.</td>
+</tr>
+<tr>
+<td><code><a id="Publication-title"></a><strong>title*</strong></code></td>
+<td>string</td>
+<td>Publication title.</td>
+</tr>
+<tr>
+<td><code><strong>author_list*</strong></code></td>
+<td>string</td>
+<td>Comma-separated list of co-authors. It complements the <a href="#Publication-title">@title</a> to make the node easily recognisable.</td>
+</tr>
+<tr>
+<td><code>publication_type</code></td>
+<td>string</td>
+<td>Type of publication. The recommended practice is to use ORCID work type: <a href="https://info.orcid.org/faq/what-work-types-does-orcid-support/">https://info.orcid.org/faq/what-work-types-does-orcid-support/</a></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>URL of the item.</td>
+</tr>
+<tr>
+<td><code>doi</code></td>
+<td>string</td>
+<td>syntax: doi_prefix/doi_suffix</td>
+</tr>
+<tr>
+<td><code>isbn</code></td>
+<td>string</td>
+<td>International Standard Book Number.</td>
+</tr>
+<tr>
+<td><code>publication_year</code></td>
+<td>integer</td>
+<td>The year of the publication in YYYY format.</td>
+</tr>
+<tr>
+<td><code>scopus_eid</code></td>
+<td>integer</td>
+<td>Unique academic work identifier assigned in Scopus bibliographic database.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>* Required properties are marked with bold text.</strong></p>
+</section>
+<section class="rg-section rg-section--marked page-section">
+<p class="rg-marker" aria-hidden="true">04</p>
+<p><a id="Dataset"></a></p>
+<h2>Research Data</h2>
+<p>Representing a dataset that is an input or output of research activity.</p>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Property, Expected Type, Format and comment"><table class="rg-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Expected Type</th>
+<th>Format and comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><strong>key*</strong></code></td>
+<td>string</td>
+<td>This is a unique URI that identifies the research object in a Research Graph database. The best practice is to follow: researchgraph.ai/<a href="#Dataset-source">@source</a>/<a href="#Dataset-local_id">@local_id</a></td>
+</tr>
+<tr>
+<td><code><a id="Dataset-source"></a><strong>source*</strong></code></td>
+<td>string</td>
+<td>A unique name that identifies the source of the metadata. The best practice is to use a domain name without extension. Example: ‘orcid’, ‘datacite’, ‘nih’</td>
+</tr>
+<tr>
+<td><code><a id="Dataset-local_id"></a><strong>local_id*</strong></code></td>
+<td>string</td>
+<td>A unique string that identifies the records at the <a href="#Dataset-source">@source</a> database.</td>
+</tr>
+<tr>
+<td><code><strong>last_updated*</strong></code></td>
+<td>dateTime</td>
+<td>Date and time of updating this record in a Research Graph database.</td>
+</tr>
+<tr>
+<td><code><a id="Dataset-title"></a><strong>title*</strong></code></td>
+<td>string</td>
+<td>Dataset title.</td>
+</tr>
+<tr>
+<td><code><strong>author_list*</strong></code></td>
+<td>string</td>
+<td>Comma-separated list of creators or curators. It complements the <a href="#Dataset-title">@title</a> to make the node easily recognisable.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>URL of the item.</td>
+</tr>
+<tr>
+<td><code>doi</code></td>
+<td>string</td>
+<td>syntax: doi_prefix/doi_suffix</td>
+</tr>
+<tr>
+<td><code>publication_year</code></td>
+<td>integer</td>
+<td>The year of publishing the dataset in YYYY format.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>* Required properties are marked with bold text.</strong></p>
+</section>
+<section class="rg-section rg-section--marked page-section">
+<p class="rg-marker" aria-hidden="true">05</p>
+<p><a id="Grant"></a></p>
+<h2>Grant</h2>
+<p>Representing a funded project activity.</p>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Property, Expected Type, Format and comment"><table class="rg-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Expected Type</th>
+<th>Format and comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><strong>key*</strong></code></td>
+<td>string</td>
+<td>This is a unique URI that identifies the research object in a Research Graph database. The best practice is to follow: researchgraph.ai/<a href="#Grant-source">@source</a>/<a href="#Grant-local_id">@local_id</a></td>
+</tr>
+<tr>
+<td><code><a id="Grant-source"></a><strong>source*</strong></code></td>
+<td>string</td>
+<td>A unique name that identifies the source of the metadata. The best practice is to use a domain name without extension. Example: ‘orcid’, ‘datacite’, ‘nih’</td>
+</tr>
+<tr>
+<td><code><a id="Grant-local_id"></a><strong>local_id*</strong></code></td>
+<td>string</td>
+<td>A unique string that identifies the records at the <a href="#Grant-source">@source</a> database. Best practice: grant_number</td>
+</tr>
+<tr>
+<td><code><strong>last_updated*</strong></code></td>
+<td>dateTime</td>
+<td>Date and time of updating this record in a Research Graph database.</td>
+</tr>
+<tr>
+<td><code><strong>title*</strong></code></td>
+<td>string</td>
+<td>Grant title.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>URL of the item.</td>
+</tr>
+<tr>
+<td><code>purl</code></td>
+<td>string</td>
+<td>E.g. http://purl.org/au-research/grants/arc/SR0567397</td>
+</tr>
+<tr>
+<td><code>doi</code></td>
+<td>string</td>
+<td>syntax: doi_prefix/doi_suffix</td>
+</tr>
+<tr>
+<td><code>publication_year</code></td>
+<td>integer</td>
+<td>The year of publishing the Grant in YYYY format.</td>
+</tr>
+<tr>
+<td><code>funder</code></td>
+<td>string</td>
+<td>Best practice: funder domain address. E.g. arc.gov.au</td>
+</tr>
+<tr>
+<td><code>funding_amount</code></td>
+<td>long</td>
+<td>E.g. 450000</td>
+</tr>
+<tr>
+<td><code>funding_currency</code></td>
+<td>string</td>
+<td>The currency in which the funding amount is expressed. The best practice is to use ISO 4217 codes. More information: <a href="https://en.wikipedia.org/wiki/ISO_4217">https://en.wikipedia.org/wiki/ISO_4217</a></td>
+</tr>
+<tr>
+<td><code>start_year</code></td>
+<td>integer</td>
+<td>The start year (YYYY) of the grant.</td>
+</tr>
+<tr>
+<td><code>end_year</code></td>
+<td>integer</td>
+<td>The end year (YYYY) of the grant.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>* Required properties are marked with bold text.</strong></p>
+</section>
+<section class="rg-section rg-section--marked page-section">
+<p class="rg-marker" aria-hidden="true">06</p>
+<p><a id="Organisation"></a></p>
+<h2>Organisation</h2>
+<p>Representing a research organisation like a university or a research institute.</p>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Property, Expected Type, Format and comment"><table class="rg-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Expected Type</th>
+<th>Format and comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><strong>key*</strong></code></td>
+<td>string</td>
+<td>This is a unique URI that identifies the research object in a Research Graph database. The best practice is to follow: researchgraph.ai/<a href="#Organisation-source">@source</a>/<a href="#Organisation-local_id">@local_id</a></td>
+</tr>
+<tr>
+<td><code><a id="Organisation-source"></a><strong>source*</strong></code></td>
+<td>string</td>
+<td>A unique name that identifies the source of the metadata. The best practice is to use a domain name without extension. Example: ‘orcid’, ‘datacite’, ‘nih’</td>
+</tr>
+<tr>
+<td><code><a id="Organisation-local_id"></a><strong>local_id*</strong></code></td>
+<td>string</td>
+<td>A unique string that identifies the records at the <a href="#Organisation-source">@source</a> database.</td>
+</tr>
+<tr>
+<td><code><strong>last_updated*</strong></code></td>
+<td>dateTime</td>
+<td>Date and time of updating this record in a Research Graph database.</td>
+</tr>
+<tr>
+<td><code><strong>name*</strong></code></td>
+<td>string</td>
+<td>Organisation name. The best practice is to use the English label from WikiData records.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>E.g. http://www.monash.edu/</td>
+</tr>
+<tr>
+<td><code>grid</code></td>
+<td>string</td>
+<td>E.g. grid.1002.3</td>
+</tr>
+<tr>
+<td><code>doi</code></td>
+<td>string</td>
+<td>syntax: doi_prefix/doi_suffix</td>
+</tr>
+<tr>
+<td><code>ror</code></td>
+<td>string</td>
+<td>E.g. 02bfwt286</td>
+</tr>
+<tr>
+<td><code>isni</code></td>
+<td>string</td>
+<td>E.g. 0000000419367857</td>
+</tr>
+<tr>
+<td><code>wikidata</code></td>
+<td>string</td>
+<td>E.g. Q598841</td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>string</td>
+<td>E.g. Australia</td>
+</tr>
+<tr>
+<td><code>сity</code></td>
+<td>string</td>
+<td>E.g. Melbourne</td>
+</tr>
+<tr>
+<td><code>latitude</code></td>
+<td>float</td>
+<td>E.g. -37.908333333333</td>
+</tr>
+<tr>
+<td><code>longitude</code></td>
+<td>float</td>
+<td>E.g. 145.13805555556</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>* Required properties are marked with bold text.</strong></p>
+</section>
+
+  <section class="rg-section rg-section--marked page-end" aria-labelledby="subscribe-title" id="subscribe">
+    <p class="rg-marker" aria-hidden="true">Updates</p>
+    <h2 id="subscribe-title">Get each new article by email</h2>
+    <p>The Foundation publishes its articles on the hub. Subscribe once and each new article arrives by email. It is free, and you can stop at any time.</p>
+    <form class="signup-form" method="get" action="https://hub.researchgraph.org/#/portal/signup" data-api="https://hub.researchgraph.org/members/api/send-magic-link/" novalidate>
+      <div class="rg-field">
+        <label for="signup-email">Email address</label>
+        <span class="rg-hint" id="signup-hint">Used only to send you the articles.</span>
+        <input class="rg-input" id="signup-email" type="email" autocomplete="email" required aria-describedby="signup-hint">
+      </div>
+      <button class="rg-button" type="submit">Subscribe</button>
+      <div class="rg-notice signup-notice" role="status" hidden
+        data-done="Done: check your inbox for an email from the hub, and open the link in it to confirm." data-invalid="Error: enter a full email address, with an @ sign and a domain." data-failed="Error: the hub did not accept the request. Try again in a minute, or">
+        <svg class="rg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-1 6v7h2v-7h-2Zm0-3v2h2V7h-2Z"/></svg>
+        <p></p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="rg-footer site-footer">
+  <div class="rg-container footer-grid">
+    <div class="footer-intro">
+      <img class="footer-logo rg-theme-light-only" src="/assets/images/site/logo.svg" alt="Research Graph" width="194" height="32">
+      <img loading="lazy" decoding="async" class="footer-logo rg-theme-dark-only" src="/assets/images/site/logo-white.svg" alt="Research Graph" width="194" height="32">
+      <p class="footer-tagline">Science moves faster when it can see itself.</p>
+      <p class="rg-muted">Made by scientists, for science</p>
+    </div>
+    <div>
+      <h2 class="rg-eyebrow">Contact</h2>
+      <p>
+        <a class="js-email" data-user="support" data-domain="researchgraph.org">support (at) researchgraph.org</a><br>
+        5A Hartnett Cl, Mulgrave VIC 3170<br>
+        PO Box 7084, Wattle Park VIC 3128, Australia
+      </p>
+    </div>
+    <div>
+      <h2 class="rg-eyebrow">More</h2>
+      <ul class="footer-links">
+        <li><a href="https://hub.researchgraph.org/">Hub</a></li>
+        <li><a href="https://github.com/researchgraph/">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/company/research-graph">LinkedIn</a></li>
+        <li><a href="/about/#work-with-us">Work with us</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rg-container footer-bottom">
+    <p>Research Graph Foundation Ltd. <a href="https://creativecommons.org/licenses/by/4.0/">Website content is licensed under a Creative Commons Attribution 4.0 International Licence. Individual datasets may use other licences.</a></p>
+    <p class="footer-version">Version 1.0.1. Last updated 30 October 2026.</p>
+  </div>
+</footer>
+</body>
+</html>

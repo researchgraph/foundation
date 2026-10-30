@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Augment-API · Research Graph</title>
+<meta name="description" content="A service that turned a single ORCID or DOI into a connected graph of researchers, publications, datasets and grants.">
+<link rel="canonical" href="https://researchgraph.org/augment-api/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Research Graph Foundation">
+<meta property="og:title" content="Augment-API · Research Graph">
+<meta property="og:description" content="A service that turned a single ORCID or DOI into a connected graph of researchers, publications, datasets and grants.">
+<meta property="og:url" content="https://researchgraph.org/augment-api/">
+<meta property="og:image" content="https://researchgraph.org/augment-api/images/augment-api.svg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/images/site/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/images/site/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/site/apple-touch-icon.png">
+<link rel="preload" href="/fonts/source-sans-3-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/research-graph.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/research-graph-graph.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="rg-skip-link" href="#main">Skip to content</a>
+<div class="rg-container">
+  <header class="rg-header">
+    <a class="rg-header__brand" href="/" aria-label="Research Graph Foundation home">
+      <img class="rg-header__logo rg-theme-light-only" src="/assets/images/site/logo.svg" alt="Research Graph" width="242" height="40">
+      <img class="rg-header__logo rg-theme-dark-only" src="/assets/images/site/logo-white.svg" alt="Research Graph" width="242" height="40">
+    </a>
+    <details class="rg-menu" open>
+      <summary>Menu</summary>
+      <nav class="rg-nav" aria-label="Main">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schema/">Schema</a></li>
+          <li class="has-children">
+            <details>
+              <summary aria-current="true">Projects</summary>
+              <ul>
+                <li><a href="/national-graph/">National (PID) Graph</a></li>
+                <li><a href="/cadre/">CADRE</a></li>
+                <li><a href="/augment-api/" aria-current="page">Augment-API</a></li>
+                <li><a href="/research-graph-team/">Research Graph Team</a></li>
+                <li><a href="/covid-19-research-graph/">COVID-19 Research Graph</a></li>
+                <li><a href="/gesis-research-graph/">GESIS Research Graph</a></li>
+                <li><a href="/nci-research-graph/">NCI Research Graph</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="https://hub.researchgraph.org/">Hub</a></li>
+          <li class="has-children">
+            <details>
+              <summary>About</summary>
+              <ul>
+                <li><a href="/about/">About us</a></li>
+                <li><a href="/collaborators/">Collaborators</a></li>
+                <li><a href="/collaborators/publications/">Publications</a></li>
+                <li><a href="/about/#contact-us">Contact</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </details>
+  </header>
+</div>
+
+<main id="main" class="rg-container">
+  <div class="page-top page-top--side">
+    <div class="page-top__main">
+      <div class="page-header">
+        <p class="rg-eyebrow">Projects</p>
+        <h1>Augment API</h1>
+        
+      </div>
+      <div class="page-intro">
+<p>The Research Graph Augment API was a service that turned the metadata of research objects into a collaboration network. Given a single ORCID or DOI, it returned a connected graph of the researchers, publications, datasets, grants and organisations linked to it.</p>
+<p>This page is a record of the completed project. The service ran as a beta from 2021, the project is closed, and it has no further work planned.</p>
+<p>The nodes followed the <a href="/schema/">Research Graph schema</a>.</p>
+      </div>
+    </div>
+<div class="page-aside page-aside--figure">
+<figure class="figure figure--graph"><svg xmlns="http://www.w3.org/2000/svg" class="rg-graph" viewBox="0 0 416 296" width="416" height="296" role="group" aria-label="The connections the Augment API returned for a single identifier: a researcher linked through research data, a grant or a publication to another researcher, and that researcher to an organisation">
+<g fill="none" stroke="#757B81" stroke-width="1.5" stroke-linecap="round">
+<line x1="40" y1="32" x2="152" y2="32"/>
+<line x1="152" y1="32" x2="264" y2="32"/>
+<line x1="264" y1="32" x2="376" y2="32"/>
+<line x1="40" y1="140" x2="152" y2="140"/>
+<line x1="152" y1="140" x2="264" y2="140"/>
+<line x1="264" y1="140" x2="376" y2="140"/>
+<line x1="40" y1="248" x2="152" y2="248"/>
+<line x1="152" y1="248" x2="264" y2="248"/>
+<line x1="264" y1="248" x2="376" y2="248"/>
+</g>
+<rect class="rg-entity-node rg-entity--researcher" x="18" y="10" width="44" height="44" rx="6.6" fill="#63CC9E" stroke="#56B38C" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--research-data" x="130" y="10" width="44" height="44" rx="6.6" fill="#EB6E1F" stroke="#B84A03" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--researcher" x="242" y="10" width="44" height="44" rx="6.6" fill="#63CC9E" stroke="#56B38C" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--organisation" x="354" y="10" width="44" height="44" rx="6.6" fill="#9662D0" stroke="#65428E" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--researcher" x="18" y="118" width="44" height="44" rx="6.6" fill="#63CC9E" stroke="#56B38C" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--grant" x="130" y="118" width="44" height="44" rx="6.6" fill="#FFD66C" stroke="#F3B835" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--researcher" x="242" y="118" width="44" height="44" rx="6.6" fill="#63CC9E" stroke="#56B38C" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--organisation" x="354" y="118" width="44" height="44" rx="6.6" fill="#9662D0" stroke="#65428E" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--researcher" x="18" y="226" width="44" height="44" rx="6.6" fill="#63CC9E" stroke="#56B38C" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--publication" x="130" y="226" width="44" height="44" rx="6.6" fill="#55BFF6" stroke="#4BA9DC" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--researcher" x="242" y="226" width="44" height="44" rx="6.6" fill="#63CC9E" stroke="#56B38C" stroke-width="2"/>
+<rect class="rg-entity-node rg-entity--organisation" x="354" y="226" width="44" height="44" rx="6.6" fill="#9662D0" stroke="#65428E" stroke-width="2"/>
+<g font-family="'Source Sans 3', 'Source Sans Pro', Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1A1F24" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round" paint-order="stroke">
+<text x="40" y="74">Researcher</text>
+<text x="152" y="74">Research Data</text>
+<text x="264" y="74">Researcher</text>
+<text x="376" y="74">Organisation</text>
+<text x="40" y="182">Researcher</text>
+<text x="152" y="182">Grant</text>
+<text x="264" y="182">Researcher</text>
+<text x="376" y="182">Organisation</text>
+<text x="40" y="290">Researcher</text>
+<text x="152" y="290">Publication</text>
+<text x="264" y="290">Researcher</text>
+<text x="376" y="290">Organisation</text>
+</g>
+</svg></figure>
+</div>
+
+  </div>
+<section class="rg-section rg-section--marked page-section" id="the-identifiers-it-supported">
+<p class="rg-marker" aria-hidden="true">01</p>
+<h2>The identifiers it supported</h2>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Identifier, Entities"><table class="rg-table">
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Entities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ORCID: <a href="https://registry.identifiers.org/registry/orcid">https://registry.identifiers.org/registry/orcid</a></td>
+<td><span class="rg-entity-tag rg-entity--researcher">Researcher</span></td>
+</tr>
+<tr>
+<td>DOI: <a href="https://registry.identifiers.org/registry/doi">https://registry.identifiers.org/registry/doi</a></td>
+<td><span class="rg-entity-tag rg-entity--publication">Publication</span> <span class="rg-entity-tag rg-entity--research-data">Research Data</span> <span class="rg-entity-tag rg-entity--organisation">Organisation</span> <span class="rg-entity-tag rg-entity--grant">Grant</span></td>
+</tr>
+<tr>
+<td>PubMed: <a href="https://registry.identifiers.org/registry/pubmed">https://registry.identifiers.org/registry/pubmed</a></td>
+<td><span class="rg-entity-tag rg-entity--publication">Publication</span></td>
+</tr>
+<tr>
+<td>GRID: <a href="https://registry.identifiers.org/registry/grid">https://registry.identifiers.org/registry/grid</a></td>
+<td><span class="rg-entity-tag rg-entity--organisation">Organisation</span></td>
+</tr>
+<tr>
+<td>ROR: <a href="https://ror.org">https://ror.org</a></td>
+<td><span class="rg-entity-tag rg-entity--organisation">Organisation</span></td>
+</tr>
+<tr>
+<td>ISNI: <a href="https://registry.identifiers.org/registry/isni">https://registry.identifiers.org/registry/isni</a></td>
+<td><span class="rg-entity-tag rg-entity--organisation">Organisation</span></td>
+</tr>
+<tr>
+<td>WikiData: <a href="https://registry.identifiers.org/registry/wikidata">https://registry.identifiers.org/registry/wikidata</a></td>
+<td><span class="rg-entity-tag rg-entity--organisation">Organisation</span></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="rg-section rg-section--marked page-section section--split" id="background">
+<p class="rg-marker" aria-hidden="true">02</p>
+<h2>Background</h2>
+<p>Research Graph designed the Augment API in 2017 as a cloud service to turn disconnected research information into a connected graph, and to enrich that graph with data from the global network of scholarly works. It used the Research Graph distributed network and persistent identifiers to connect publications, researchers, research datasets and grants across global infrastructures such as DataCite and open access initiatives such as Scholix.</p>
+<p>The project began with the partners in the <a href="https://www.rd-alliance.org/groups/data-description-registry-interoperability/">Research Data Alliance Working Group on Data Description Registry Interoperability</a>. <a href="/gesis-research-graph/">GESIS</a> in Germany and <a href="/nci-research-graph/">NCI</a> in Australia built the first implementations. Two webinars in 2018 presented that work:</p>
+<ul class="rg-node-list">
+<li><a href="https://www.youtube.com/watch?v=DVV7SdA5_2g">Tracking research data footprints via integration with Research Graph</a>, 8 March 2018. Dr Ben Evans and Dr Jingbo Wang of the National Computational Infrastructure (NCI) presented the NCI Augmented Graph and showed how researchers and third-party systems could reach and use its information.</li>
+<li>Discovering Research Data Links via GESIS LOD Research Graph, 28 February 2018.</li>
+</ul>
+<figure class="section-aside figure figure--picture"><img width="2435" height="1029" src="/augment-api/images/augment-api-figure.gif" alt="The capabilities that Research Graph cloud services offered through the Augment API"></figure>
+<p>In 2021 the project opened a RESTful gateway to the service as a beta. It did not cover every function of the Research Graph augmentation services, but it made the core capability available to the Australian and international research community. Beta testers used the API free of charge for non-commercial work and received support through a private Slack channel. The beta's sample Jupyter notebooks remain on <a href="https://github.com/researchgraph/augment-api-beta">GitHub</a> as a record.</p>
+</section>
+<section class="rg-section rg-section--marked page-section" id="organisation-disambiguation">
+<p class="rg-marker" aria-hidden="true">03</p>
+<h2>Organisation disambiguation</h2>
+<p>A key strength of the Augment API was its access to the Research Graph entity resolution algorithms for organisation records. The services combined natural language processing with processes designed by domain experts to link each organisation name to the closest record in Wikidata. Wikidata was chosen for its wide coverage of organisation names in many languages and across the research, education, government, not-for-profit and commercial sectors. The underlying graph also held the connections to ROR, GRID and ISNI.</p>
+</section>
+
+  <section class="rg-section rg-section--marked page-end" aria-labelledby="subscribe-title" id="subscribe">
+    <p class="rg-marker" aria-hidden="true">Updates</p>
+    <h2 id="subscribe-title">Get each new article by email</h2>
+    <p>The Foundation publishes its articles on the hub. Subscribe once and each new article arrives by email. It is free, and you can stop at any time.</p>
+    <form class="signup-form" method="get" action="https://hub.researchgraph.org/#/portal/signup" data-api="https://hub.researchgraph.org/members/api/send-magic-link/" novalidate>
+      <div class="rg-field">
+        <label for="signup-email">Email address</label>
+        <span class="rg-hint" id="signup-hint">Used only to send you the articles.</span>
+        <input class="rg-input" id="signup-email" type="email" autocomplete="email" required aria-describedby="signup-hint">
+      </div>
+      <button class="rg-button" type="submit">Subscribe</button>
+      <div class="rg-notice signup-notice" role="status" hidden
+        data-done="Done: check your inbox for an email from the hub, and open the link in it to confirm." data-invalid="Error: enter a full email address, with an @ sign and a domain." data-failed="Error: the hub did not accept the request. Try again in a minute, or">
+        <svg class="rg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-1 6v7h2v-7h-2Zm0-3v2h2V7h-2Z"/></svg>
+        <p></p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="rg-footer site-footer">
+  <div class="rg-container footer-grid">
+    <div class="footer-intro">
+      <img loading="lazy" decoding="async" class="footer-logo rg-theme-light-only" src="/assets/images/site/logo.svg" alt="Research Graph" width="194" height="32">
+      <img loading="lazy" decoding="async" class="footer-logo rg-theme-dark-only" src="/assets/images/site/logo-white.svg" alt="Research Graph" width="194" height="32">
+      <p class="footer-tagline">Science moves faster when it can see itself.</p>
+      <p class="rg-muted">Made by scientists, for science</p>
+    </div>
+    <div>
+      <h2 class="rg-eyebrow">Contact</h2>
+      <p>
+        <a class="js-email" data-user="support" data-domain="researchgraph.org">support (at) researchgraph.org</a><br>
+        5A Hartnett Cl, Mulgrave VIC 3170<br>
+        PO Box 7084, Wattle Park VIC 3128, Australia
+      </p>
+    </div>
+    <div>
+      <h2 class="rg-eyebrow">More</h2>
+      <ul class="footer-links">
+        <li><a href="https://hub.researchgraph.org/">Hub</a></li>
+        <li><a href="https://github.com/researchgraph/">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/company/research-graph">LinkedIn</a></li>
+        <li><a href="/about/#work-with-us">Work with us</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rg-container footer-bottom">
+    <p>Research Graph Foundation Ltd. <a href="https://creativecommons.org/licenses/by/4.0/">Website content is licensed under a Creative Commons Attribution 4.0 International Licence. Individual datasets may use other licences.</a></p>
+    <p class="footer-version">Version 1.0.1. Last updated 30 October 2026.</p>
+  </div>
+</footer>
+</body>
+</html>

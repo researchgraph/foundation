@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GESIS Research Graph · Research Graph</title>
+<meta name="description" content="An early deployment of the Augment API with GESIS in Germany, which produced an open graph of 180,582 nodes.">
+<link rel="canonical" href="https://researchgraph.org/gesis-research-graph/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Research Graph Foundation">
+<meta property="og:title" content="GESIS Research Graph · Research Graph">
+<meta property="og:description" content="An early deployment of the Augment API with GESIS in Germany, which produced an open graph of 180,582 nodes.">
+<meta property="og:url" content="https://researchgraph.org/gesis-research-graph/">
+<meta property="og:image" content="https://researchgraph.org/gesis-research-graph/images/GESIS-Logo.png">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/images/site/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/images/site/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/site/apple-touch-icon.png">
+<link rel="preload" href="/fonts/source-sans-3-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/research-graph.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="rg-skip-link" href="#main">Skip to content</a>
+<div class="rg-container">
+  <header class="rg-header">
+    <a class="rg-header__brand" href="/" aria-label="Research Graph Foundation home">
+      <img class="rg-header__logo rg-theme-light-only" src="/assets/images/site/logo.svg" alt="Research Graph" width="242" height="40">
+      <img class="rg-header__logo rg-theme-dark-only" src="/assets/images/site/logo-white.svg" alt="Research Graph" width="242" height="40">
+    </a>
+    <details class="rg-menu" open>
+      <summary>Menu</summary>
+      <nav class="rg-nav" aria-label="Main">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schema/">Schema</a></li>
+          <li class="has-children">
+            <details>
+              <summary aria-current="true">Projects</summary>
+              <ul>
+                <li><a href="/national-graph/">National (PID) Graph</a></li>
+                <li><a href="/cadre/">CADRE</a></li>
+                <li><a href="/augment-api/">Augment-API</a></li>
+                <li><a href="/research-graph-team/">Research Graph Team</a></li>
+                <li><a href="/covid-19-research-graph/">COVID-19 Research Graph</a></li>
+                <li><a href="/gesis-research-graph/" aria-current="page">GESIS Research Graph</a></li>
+                <li><a href="/nci-research-graph/">NCI Research Graph</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="https://hub.researchgraph.org/">Hub</a></li>
+          <li class="has-children">
+            <details>
+              <summary>About</summary>
+              <ul>
+                <li><a href="/about/">About us</a></li>
+                <li><a href="/collaborators/">Collaborators</a></li>
+                <li><a href="/collaborators/publications/">Publications</a></li>
+                <li><a href="/about/#contact-us">Contact</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </details>
+  </header>
+</div>
+
+<main id="main" class="rg-container">
+  <div class="page-top page-top--side">
+    <div class="page-top__main">
+      <div class="page-header">
+        <p class="rg-eyebrow">Projects</p>
+        <h1>GESIS Research Graph</h1>
+        <p class="page-logo"><img width="422" height="228" class="rg-on-light" src="/gesis-research-graph/images/GESIS-Logo.png" alt="GESIS – Leibniz Institute for the Social Sciences"></p>
+      </div>
+      <div class="page-intro">
+<p>The GESIS Research Graph was one of the first working deployments of the Research Graph <a href="/augment-api/">Augment API</a>. GESIS – Leibniz Institute for the Social Sciences, Germany's largest infrastructure institution for the social sciences, based in Mannheim and Cologne, implemented it. The project built one connected graph of the publications, datasets and grants around the GESIS collections, and enriched that graph with links drawn from the global network of scholarly works. It put the augmentation method to work on a national research infrastructure, at a scale of 180,582 nodes.</p>
+<p>This page is a record of the completed GESIS project. The figures below are those the project published, and they are no longer updated.</p>
+      </div>
+    </div>
+<section class="page-aside" id="what-the-project-built">
+<h2 class="rg-eyebrow page-aside__title">What the project built</h2>
+<dl class="rg-stats">
+<div class="rg-stat rg-entity-card rg-entity--publication"><dt>publications, including 8,596 augmented nodes</dt><dd>110,949</dd></div>
+<div class="rg-stat rg-entity-card rg-entity--research-data"><dt>datasets, including 160 augmented nodes</dt><dd>6,259</dd></div>
+<div class="rg-stat rg-entity-card rg-entity--grant"><dt>grants</dt><dd>53,914</dd></div>
+</dl>
+
+<p>An augmented node is a record that the Augment API drew into the graph from the global network of scholarly works.</p>
+</section>
+
+  </div>
+<section class="rg-section rg-section--marked page-section section--split" id="the-open-graph">
+<p class="rg-marker" aria-hidden="true">01</p>
+<h2>The open graph</h2>
+<p>The project released the complete graph as open data. It holds 180,582 nodes and remains available for download in GraphML format.</p>
+<p><a href="/assets/files/gesis.graphml.zip">Download the GraphML file</a></p>
+<figure class="section-aside figure figure--picture figure--square"><img loading="lazy" decoding="async" width="948" height="867" src="/gesis-research-graph/images/gesis_graph.png" alt="A network drawing of a small section of the GESIS graph"><figcaption>A small section of the GESIS graph. The colours are the clusters the drawing tool found, not entity types.</figcaption></figure>
+</section>
+<section class="rg-section rg-section--marked page-section" id="two-thirds-of-the-publications-date-from-2000-or-later">
+<p class="rg-marker" aria-hidden="true">02</p>
+<h2>Two-thirds of the publications date from 2000 or later</h2>
+<figure class="figure figure--chart"><img loading="lazy" decoding="async" width="720" height="380" src="/gesis-research-graph/images/gesis-publications-by-year.svg" alt="Bar chart of publications in the GESIS graph by year of publication, from 1950 to 2017"><figcaption>Publications in the GESIS graph by year of publication.</figcaption></figure>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Publications by year, in the same figures as the chart. Download the data (CSV)."><table class="rg-table"><caption>Publications by year, in the same figures as the chart. <a href="/assets/data/gesis_publication_years_cleaned_summary.csv">Download the data (CSV)</a>.</caption>
+<thead>
+<tr>
+<th>Decade</th>
+<th class="rg-num">…0</th>
+<th class="rg-num">…1</th>
+<th class="rg-num">…2</th>
+<th class="rg-num">…3</th>
+<th class="rg-num">…4</th>
+<th class="rg-num">…5</th>
+<th class="rg-num">…6</th>
+<th class="rg-num">…7</th>
+<th class="rg-num">…8</th>
+<th class="rg-num">…9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1950s</td>
+<td class="rg-num">2</td>
+<td class="rg-num">2</td>
+<td class="rg-num">10</td>
+<td class="rg-num">6</td>
+<td class="rg-num">19</td>
+<td class="rg-num">12</td>
+<td class="rg-num">8</td>
+<td class="rg-num">11</td>
+<td class="rg-num">11</td>
+<td class="rg-num">13</td>
+</tr>
+<tr>
+<td>1960s</td>
+<td class="rg-num">19</td>
+<td class="rg-num">11</td>
+<td class="rg-num">24</td>
+<td class="rg-num">22</td>
+<td class="rg-num">15</td>
+<td class="rg-num">38</td>
+<td class="rg-num">27</td>
+<td class="rg-num">34</td>
+<td class="rg-num">46</td>
+<td class="rg-num">54</td>
+</tr>
+<tr>
+<td>1970s</td>
+<td class="rg-num">60</td>
+<td class="rg-num">46</td>
+<td class="rg-num">60</td>
+<td class="rg-num">81</td>
+<td class="rg-num">69</td>
+<td class="rg-num">82</td>
+<td class="rg-num">85</td>
+<td class="rg-num">106</td>
+<td class="rg-num">121</td>
+<td class="rg-num">93</td>
+</tr>
+<tr>
+<td>1980s</td>
+<td class="rg-num">131</td>
+<td class="rg-num">105</td>
+<td class="rg-num">151</td>
+<td class="rg-num">184</td>
+<td class="rg-num">231</td>
+<td class="rg-num">275</td>
+<td class="rg-num">247</td>
+<td class="rg-num">272</td>
+<td class="rg-num">279</td>
+<td class="rg-num">344</td>
+</tr>
+<tr>
+<td>1990s</td>
+<td class="rg-num">454</td>
+<td class="rg-num">513</td>
+<td class="rg-num">581</td>
+<td class="rg-num">625</td>
+<td class="rg-num">690</td>
+<td class="rg-num">681</td>
+<td class="rg-num">758</td>
+<td class="rg-num">794</td>
+<td class="rg-num">911</td>
+<td class="rg-num">867</td>
+</tr>
+<tr>
+<td>2000s</td>
+<td class="rg-num">1,064</td>
+<td class="rg-num">1,015</td>
+<td class="rg-num">960</td>
+<td class="rg-num">1,067</td>
+<td class="rg-num">974</td>
+<td class="rg-num">987</td>
+<td class="rg-num">1,087</td>
+<td class="rg-num">1,014</td>
+<td class="rg-num">1,097</td>
+<td class="rg-num">1,243</td>
+</tr>
+<tr>
+<td>2010s</td>
+<td class="rg-num">1,251</td>
+<td class="rg-num">1,334</td>
+<td class="rg-num">1,593</td>
+<td class="rg-num">1,583</td>
+<td class="rg-num">1,691</td>
+<td class="rg-num">1,420</td>
+<td class="rg-num">934</td>
+<td class="rg-num">172</td>
+<td class="rg-num"></td>
+<td class="rg-num"></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<div class="section-pair">
+<section class="rg-section rg-section--marked page-section" id="researchers-with-most-publications">
+<p class="rg-marker" aria-hidden="true">03</p>
+<h2>Researchers with most publications</h2>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Author, Publications, ORCID"><table class="rg-table">
+<thead>
+<tr>
+<th>Author</th>
+<th class="rg-num">Publications</th>
+<th>ORCID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carlo La Vecchia</td>
+<td class="rg-num">3,719</td>
+<td>0000-0003-1441-897X</td>
+</tr>
+<tr>
+<td>Colin Williams</td>
+<td class="rg-num">487</td>
+<td>0000-0002-3610-1933</td>
+</tr>
+<tr>
+<td>Graham Thornicroft</td>
+<td class="rg-num">358</td>
+<td>0000-0003-0662-0879</td>
+</tr>
+<tr>
+<td>Donald Lynam</td>
+<td class="rg-num">292</td>
+<td>0000-0001-8306-498X</td>
+</tr>
+<tr>
+<td>Silvano Gallus</td>
+<td class="rg-num">221</td>
+<td>0000-0002-8967-0400</td>
+</tr>
+<tr>
+<td>Hynek Pikhart</td>
+<td class="rg-num">217</td>
+<td>0000-0001-5277-4049</td>
+</tr>
+<tr>
+<td>Chris Sibley</td>
+<td class="rg-num">196</td>
+<td>0000-0002-4064-8800</td>
+</tr>
+<tr>
+<td>Roy Thurik</td>
+<td class="rg-num">151</td>
+<td>0000-0002-0242-6908</td>
+</tr>
+<tr>
+<td>Steven Van de Walle</td>
+<td class="rg-num">123</td>
+<td>0000-0003-1531-7097</td>
+</tr>
+<tr>
+<td>Daniel Diaz-Fuentes</td>
+<td class="rg-num">119</td>
+<td>0000-0002-6290-2363</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="rg-section rg-section--marked page-section" id="researchers-with-most-datasets">
+<p class="rg-marker" aria-hidden="true">04</p>
+<h2>Researchers with most datasets</h2>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Table: Author, Datasets, ORCID"><table class="rg-table">
+<thead>
+<tr>
+<th>Author</th>
+<th class="rg-num">Datasets</th>
+<th>ORCID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Christof Wolf</td>
+<td class="rg-num">94</td>
+<td>0000-0002-9364-9524</td>
+</tr>
+<tr>
+<td>Alison Park</td>
+<td class="rg-num">33</td>
+<td>0000-0001-5650-3852</td>
+</tr>
+<tr>
+<td>Thomas Hildebrandt</td>
+<td class="rg-num">9</td>
+<td>0000-0001-7054-9590</td>
+</tr>
+<tr>
+<td>Paula Devine</td>
+<td class="rg-num">7</td>
+<td>0000-0002-8212-8619</td>
+</tr>
+<tr>
+<td>Thomas Gschwend</td>
+<td class="rg-num">7</td>
+<td>0000-0002-8656-9622</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</div>
+<section class="rg-section rg-section--marked page-section" id="no-two-authors-wrote-more-than-four-works-together">
+<p class="rg-marker" aria-hidden="true">05</p>
+<h2>No two authors wrote more than four works together</h2>
+<figure class="figure figure--chart"><img loading="lazy" decoding="async" width="720" height="490" src="/gesis-research-graph/images/gesis-co-authors.svg" alt="Bar chart of the pairs of authors in the GESIS graph with the most co-authored works"><figcaption>The fifteen pairs of authors in the GESIS graph with the most co-authored works.</figcaption></figure>
+<div class="table-wrap rg-table-scroll" role="region" tabindex="0" aria-label="Each pair is counted once. Download the data (CSV)."><table class="rg-table"><caption>Each pair is counted once. <a href="/assets/data/gesis_authors_collaboration.csv">Download the data (CSV)</a>.</caption>
+<thead>
+<tr>
+<th>Author</th>
+<th>Co-author</th>
+<th class="rg-num">Co-authored works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daniel Diaz-Fuentes</td>
+<td>Marcos Fernandez-Gutierrez</td>
+<td class="rg-num">4</td>
+</tr>
+<tr>
+<td>Sebastian Jilke</td>
+<td>Steven Van De Walle</td>
+<td class="rg-num">4</td>
+</tr>
+<tr>
+<td>Alison Park</td>
+<td>Paula Devine</td>
+<td class="rg-num">3</td>
+</tr>
+<tr>
+<td>Alberto Marzucchi</td>
+<td>Roberto Zoboli</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Alison Park</td>
+<td>Christof Wolf</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Carlo La Vecchia</td>
+<td>Jose M Martínez-Sánchez</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Carlo La Vecchia</td>
+<td>Silvano Gallus</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Daniel Diaz-Fuentes</td>
+<td>Judith Clifton</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Giovanni Marin</td>
+<td>Roberto Zoboli</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Judith Clifton</td>
+<td>Marcos Fernandez-Gutierrez</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Olga Popova</td>
+<td>Vladimir Otrachshenko</td>
+<td class="rg-num">2</td>
+</tr>
+<tr>
+<td>Alberto Marzucchi</td>
+<td>Giovanni Marin</td>
+<td class="rg-num">1</td>
+</tr>
+<tr>
+<td>Alistair Stott</td>
+<td>Luiza Toma</td>
+<td class="rg-num">1</td>
+</tr>
+<tr>
+<td>Alvaro Martinez-Perez</td>
+<td>Colin Williams</td>
+<td class="rg-num">1</td>
+</tr>
+<tr>
+<td>Andrea Ceron</td>
+<td>Vincenzo Memoli</td>
+<td class="rg-num">1</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="rg-section rg-section--marked page-section" id="related-work">
+<p class="rg-marker" aria-hidden="true">06</p>
+<h2>Related work</h2>
+<p>The <a href="/augment-api/">Augment API</a> page describes the service behind this graph. GESIS is listed among Research Graph's <a href="/collaborators/">collaborators</a>.</p>
+</section>
+
+  <section class="rg-section rg-section--marked page-end" aria-labelledby="subscribe-title" id="subscribe">
+    <p class="rg-marker" aria-hidden="true">Updates</p>
+    <h2 id="subscribe-title">Get each new article by email</h2>
+    <p>The Foundation publishes its articles on the hub. Subscribe once and each new article arrives by email. It is free, and you can stop at any time.</p>
+    <form class="signup-form" method="get" action="https://hub.researchgraph.org/#/portal/signup" data-api="https://hub.researchgraph.org/members/api/send-magic-link/" novalidate>
+      <div class="rg-field">
+        <label for="signup-email">Email address</label>
+        <span class="rg-hint" id="signup-hint">Used only to send you the articles.</span>
+        <input class="rg-input" id="signup-email" type="email" autocomplete="email" required aria-describedby="signup-hint">
+      </div>
+      <button class="rg-button" type="submit">Subscribe</button>
+      <div class="rg-notice signup-notice" role="status" hidden
+        data-done="Done: check your inbox for an email from the hub, and open the link in it to confirm." data-invalid="Error: enter a full email address, with an @ sign and a domain." data-failed="Error: the hub did not accept the request. Try again in a minute, or">
+        <svg class="rg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-1 6v7h2v-7h-2Zm0-3v2h2V7h-2Z"/></svg>
+        <p></p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="rg-footer site-footer">
+  <div class="rg-container footer-grid">
+    <div class="footer-intro">
+      <img loading="lazy" decoding="async" class="footer-logo rg-theme-light-only" src="/assets/images/site/logo.svg" alt="Research Graph" width="194" height="32">
+      <img loading="lazy" decoding="async" class="footer-logo rg-theme-dark-only" src="/assets/images/site/logo-white.svg" alt="Research Graph" width="194" height="32">
+      <p class="footer-tagline">Science moves faster when it can see itself.</p>
+      <p class="rg-muted">Made by scientists, for science</p>
+    </div>
+    <div>
+      <h2 class="rg-eyebrow">Contact</h2>
+      <p>
+        <a class="js-email" data-user="support" data-domain="researchgraph.org">support (at) researchgraph.org</a><br>
+        5A Hartnett Cl, Mulgrave VIC 3170<br>
+        PO Box 7084, Wattle Park VIC 3128, Australia
+      </p>
+    </div>
+    <div>
+      <h2 class="rg-eyebrow">More</h2>
+      <ul class="footer-links">
+        <li><a href="https://hub.researchgraph.org/">Hub</a></li>
+        <li><a href="https://github.com/researchgraph/">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/company/research-graph">LinkedIn</a></li>
+        <li><a href="/about/#work-with-us">Work with us</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rg-container footer-bottom">
+    <p>Research Graph Foundation Ltd. <a href="https://creativecommons.org/licenses/by/4.0/">Website content is licensed under a Creative Commons Attribution 4.0 International Licence. Individual datasets may use other licences.</a></p>
+    <p class="footer-version">Version 1.0.1. Last updated 30 October 2026.</p>
+  </div>
+</footer>
+</body>
+</html>
